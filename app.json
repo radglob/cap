@@ -1,0 +1,9 @@
+{
+  "name": "cap",
+  "description": "A community association platform",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rails db:migrate"
+    }
+  }
+}
