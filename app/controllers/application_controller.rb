@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def require_address
-    redirect_to :new_user_address_path(current_user) unless current_user.address?
+    unless current_user.address? || request.path == new_user_address_path(current_user)
+      redirect_to new_user_address_path(current_user)
+    end
   end
 end
