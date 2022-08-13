@@ -69,3 +69,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem "timecop", "~> 0.9.5"
