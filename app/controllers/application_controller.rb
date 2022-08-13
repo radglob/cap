@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
-  before_action :require_address, if: :user_signed_in?
-
   protected
 
-  def require_address
-    unless current_user.address? || request.path == new_user_address_path(current_user)
-      redirect_to new_user_address_path(current_user)
+  def after_sign_in_path_for(user)
+    if user.address?
+      root_path
+    else
+      new_user_address_path(user)
     end
   end
 end

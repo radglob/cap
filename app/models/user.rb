@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :basic_info
+  has_one :address
 
   delegate :first_name, :last_name, :birthdate, to: :basic_info, allow_nil: true
 
@@ -21,6 +22,6 @@ class User < ApplicationRecord
   end
 
   def address?
-    false
+    address.present?
   end
 end

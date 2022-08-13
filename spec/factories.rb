@@ -1,6 +1,15 @@
 require 'faker'
 
 FactoryBot.define do
+  factory :address do
+    user_id { 1 }
+    address1 { "MyString" }
+    address2 { "MyString" }
+    city { "MyString" }
+    state { "MyString" }
+    zip_code { "MyString" }
+  end
+
   factory :user, class: 'User' do
     email { Faker::Internet.email }
     password { 'password' }

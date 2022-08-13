@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :users do
-    resources :address, only: %i[new create edit update]
+    resource :address
   end
 end
