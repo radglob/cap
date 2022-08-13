@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def age
     (Date.today.year - birthdate.year)
   end
+
+  def address?
+    false
+  end
 end
