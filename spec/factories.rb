@@ -1,6 +1,16 @@
 require 'faker'
 
 FactoryBot.define do
+  factory :validated_address do
+    address1 { "MyString" }
+    address2 { "MyString" }
+    city { "MyString" }
+    state { "MyString" }
+    zip5 { "MyString" }
+    zip4 { "MyString" }
+    user_id { 1 }
+  end
+
   factory :address do
     user_id { 1 }
     address1 { "MyString" }

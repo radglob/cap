@@ -1,20 +1,15 @@
 class AddressesController < ApplicationController
   def new
-    @address_form = AddressForm.new
+    @address_form = AddressForm.new(Address.new)
   end
 
   def create
-
-  end
-
-  private
-
-  def address_params
-    params.require(:address).permit(:address1, :address2, :city, :state, :zip_code)
-  end
-
-  def to_params(address)
-    puts address.inspect
-    nil
+    @address_form = AddressForm.new(Address.new)
+    if @address_form.validate(params[:address])
+      @address_form.save
+      redirect_to validate_address_path(current_user)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 end
