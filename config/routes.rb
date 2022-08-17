@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :users do
-    resource :address
+    resource :addresses
   end
 end

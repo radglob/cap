@@ -1,20 +1,18 @@
 class AddressForm < Reform::Form
   feature Reform::Form::Dry
 
-  property :address1
-  property :address2
-  property :city
-  property :state
-  property :zip_code
+  properties :address1, :address2, :city, :state, :zip_code
 
-  validation :default do
-    required(:address1).filled
-    required(:city).filled
-    required(:state).filled
-    required(:zip_code).filled
-  end
+  validation do
+    params do
+      required(:address1).filled
+      required(:city).filled
+      required(:state).filled
+      required(:zip_code).filled
+    end
 
-  rule(:zip_code) do
-    key.failure('must be a 5 digit or 9 digit zip code') if value.length != 5 || value.length != 10
+    rule(:zip_code) do
+      key.failure('zip code must be 5 or 10 characters (including the dash)') if value.length != 5 && value.length != 10
+    end
   end
 end

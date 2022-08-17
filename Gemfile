@@ -47,9 +47,9 @@ gem 'bootsnap', require: false
 
 gem 'devise'
 
+gem 'dry-validation'
 gem 'reform', '>= 2.2.0'
 gem 'reform-rails'
-gem 'dry-validation'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -78,4 +78,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "usps", "~> 0.1.3"
+gem 'usps', '~> 0.1.3'

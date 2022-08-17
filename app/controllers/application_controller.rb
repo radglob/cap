@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     if user.address?
       root_path
     else
-      new_user_address_path(user)
+      new_user_addresses_path(user)
     end
   end
 end
