@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :users do
     resource :addresses
+    resource :validated_addresses
   end
 end

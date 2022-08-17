@@ -2,6 +2,7 @@
   <h1>New address</h1>
 
   <%= form_for [:user, @form] do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
     <div>
       <%= f.label :address1 %>
       <%= f.text_field :address1 %>

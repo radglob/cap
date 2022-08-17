@@ -1,10 +1,11 @@
 class AddressForm < Reform::Form
   feature Reform::Form::Dry
 
-  properties :address1, :address2, :city, :state, :zip_code
+  properties :user_id, :address1, :address2, :city, :state, :zip_code
 
   validation do
     params do
+      required(:user_id).filled
       required(:address1).filled
       required(:city).filled
       required(:state).filled

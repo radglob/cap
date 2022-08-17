@@ -7,7 +7,7 @@ class AddressesController < ApplicationController
     @form = AddressForm.new(Address.new)
     if @form.validate(params[:address])
       @form.save
-      redirect_to validate_address_path(current_user)
+      redirect_to new_user_validated_addresses_path(current_user)
     else
       render :new, status: :unprocessable_entity
     end
