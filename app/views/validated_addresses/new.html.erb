@@ -1,23 +1,23 @@
 <div>
-  <h1>Validate address</h1>
-  <p>The address you entered was:</p>
-  <p><%= @address.display %></p>
-  <p>This was corrected to:</p>
-  <p><%= @validated_address.display %></p>
-
+  <h1>Validate your address</h1>
   <p>Which would you like to use?</p>
   <form action="<%= user_validated_addresses_path(current_user) %>" method="post">
-    <div class="flex flex-col">
-      <div class="flex items-center space-x-2">
-        <input type="radio" id="raw_address" name="use_corrected" value="false" />
-        <label for="raw_address"><%= @address.display %></label>
+    <div class="flex space-x-4 my-4">
+      <div class="flex flex-col border border-black rounded-md p-4 space-y-8">
+        <p class="font-bold">The address you entered was:</p>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="raw_address" name="use_corrected" value="false" />
+          <label for="raw_address"><%= @address.display %></label>
+        </div>
       </div>
-      <div class="flex items-center space-x-2">
-        <input type="radio" id="corrected_address" name="use_corrected" value="true" checked />
-        <label for="corrected_address"><%= @validated_address.display %></label>
+      <div class="flex flex-col border border-black rounded-md p-4 space-y-8">
+        <p class="font-bold">This was corrected to:</p>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="corrected_address" name="use_corrected" value="true" checked />
+          <label for="corrected_address"><%= @validated_address.display %></label>
+        </div>
       </div>
-
-      <input type="submit" value="Select address" class="btn btn-primary" />
     </div>
+    <input type="submit" value="Select address" class="btn btn-primary" />
   </form>
 </div>
