@@ -16,7 +16,12 @@
   .btn {
     @apply py-2 px-4 rounded-md border-gray-500 border-2;
   }
+
   .btn-primary {
     @apply border-blue-500 text-blue-500 hover:border-blue-300 hover:text-blue-300;
+  }
+
+  .field_with_errors {
+    @apply border-2 border-red-500;
   }
 }
