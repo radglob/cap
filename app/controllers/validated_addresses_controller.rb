@@ -1,4 +1,6 @@
 class ValidatedAddressesController < ApplicationController
+  before_action :user_authenticated
+
   def new
     @address = Address.find_by(user_id: current_user.id)
     @validated_address = validated_address
@@ -24,5 +26,9 @@ class ValidatedAddressesController < ApplicationController
 
     valid_address = AddressValidation.new(username: ENV['USPS_USERNAME']).validate(@address)
     ValidatedAddress.from_usps_address(valid_address, current_user.id)
+  end
+
+  def user_authenticated
+    redirect_to root_path unless user_signed_in?
   end
 end
