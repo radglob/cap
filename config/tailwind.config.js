@@ -12,6 +12,16 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        'hero-pattern': "linear-gradient(to bottom, rgb(104,47,74,0.75), rgb(104,47,74,0)), url('/img/water-tower-hero-wide.jpg')"
+      },
+      colors: {
+        'maroon': {
+          dark: 'rgb(104,47,74,0.75)',
+          transparent: 'rgb(104,47,74,0)'
+        },
+        'gold': '#fec600'
+      }
     },
   },
   plugins: [
