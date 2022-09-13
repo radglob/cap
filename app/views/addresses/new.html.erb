@@ -1,7 +1,7 @@
 <div>
   <h1>New address</h1>
 
-  <%= form_for [:user, @form], html: { class: "flex flex-col space-y-2" } do |f| %>
+  <%= form_with model: [:user, @form], html: { class: "flex flex-col space-y-2" } do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div class="flex items-center space-x-2">
       <%= f.label :address1, "Address 1", class: "w-24" %>
