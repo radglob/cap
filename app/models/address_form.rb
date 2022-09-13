@@ -16,4 +16,8 @@ class AddressForm < Reform::Form
       key.failure('zip code must be 5 or 10 characters (including the dash)') if value.length != 5 && value.length != 10
     end
   end
+
+  def to_model
+    @model
+  end
 end
