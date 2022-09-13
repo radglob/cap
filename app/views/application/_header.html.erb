@@ -2,11 +2,9 @@
   <h1 class="text-3xl">Greenmount West Community Association</h1>
   <nav>
     <ul class="flex list-none space-x-2">
-      <li><%= link_to "Community", "#" %></li>
-      <li><%= link_to "Living Here", "#" %></li>
-      <li><%= link_to "Events", "#" %></li>
-      <li><%= link_to "Art", "#" %></li>
-      <li><%= link_to "Membership", "#" %></li>
+      <li><%= link_to "Your Board", board_path %></li>
+      <li><%= link_to "Committees", committees_path %></li>
+      <li><%= link_to "Calendar", calendar_path %></li>
       <% if user_signed_in? %>
         <li><%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete }, method: :delete %></li>
       <% else %>
