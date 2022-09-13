@@ -1,5 +1,4 @@
 class AddressForm < Reform::Form
-  model Address
   feature Reform::Form::Dry
 
   properties :user_id, :address1, :address2, :city, :state, :zip_code
