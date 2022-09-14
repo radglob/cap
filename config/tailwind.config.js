@@ -15,6 +15,9 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "linear-gradient(to bottom, rgb(104,47,74,0.75), rgb(104,47,74,0)), url('/img/water-tower-hero-wide.jpg')"
       },
+      backgroundPosition: {
+        'mobile-offset': '60% 33%'
+      },
       colors: {
         'maroon': {
           dark: 'rgb(104,47,74,0.75)',

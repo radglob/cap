@@ -15,7 +15,7 @@ export default class extends Controller {
     this.timer = setInterval(() => {
       this.peopleTarget.textContent = display;
       let colorClass = index % 2 == 0 ? "text-maroon-dark" : "text-gold";
-      this.peopleTarget.classList.add(colorClass)
+      this.peopleTarget.classList = [colorClass]
       targetLength > length ? length++ : length--
       display = content.slice(0, length)
       // Don't rewind text on last entry.
@@ -30,7 +30,7 @@ export default class extends Controller {
         clearInterval(this.timer)
         this.typeContent(index + 1)
       }
-    }, 100)
+    }, 75)
   }
 
   connect() {

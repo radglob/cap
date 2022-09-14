@@ -1,46 +1,12 @@
-<footer class="fixed bottom-0 w-full bg-gray-300">
-  <div class="w-1/2 mx-auto flex py-4">
-    <div class="flex flex-col">
-      <p class="uppercase">Greenmount West Community Association</p>
-      <p>1634 Guilford Avenue, Lanvale Entrance</p>
-      <p>Baltimore MD 21202</p>
-      <ul class="flex list-none space-x-2">
-        <li>
-          <%= link_to "Community Association", to: "#" %>
-        </li>
-        <li><%= link_to "Contact Us", to: "#" %></li>
-        <li><%= link_to "Contributors", to: "#" %></li>
-      </ul>
-    </div>
-    <div id="socials" class="flex flex-col grow items-center justify-center">
-      <p>Stay in touch</p>
-      <ul class="flex list-none space-x-1">
-        <li>
-          <%= link_to to: "#" do %>
-            <i class="fa-brands fa-facebook-f"></i>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to to: "#" do %>
-            <i class="fa-brands fa-twitter"></i>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to to: "#" do %>
-            <i class="fa-brands fa-instagram"></i>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to to: "#" do %>
-            <i class="fa-brands fa-flickr"></i>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to to: "#" do %>
-            <i class="fa-brands fa-youtube"></i>
-          <% end %>
-        </li>
-      </ul>
-    </div>
+<footer class="bottom-0 bg-gray-300">
+  <div class="flex flex-col">
+    <p class="uppercase">Greenmount West Community Association</p>
+    <p>1634 Guilford Avenue, Lanvale Entrance</p>
+    <p>Baltimore MD 21202</p>
+    <ul class="flex flex-col md:flex-row list-none space-y-2 md:space-y-0 md:space-x-2">
+      <li><%= link_to "Community Association", to: "#" %></li>
+      <li><%= link_to "Contact Us", to: "#" %></li>
+      <li><%= link_to "Contributors", to: "#" %></li>
+    </ul>
   </div>
 </footer>
