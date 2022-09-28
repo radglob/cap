@@ -1,11 +1,11 @@
-<div class="text-center">
+<div class="flex flex-col flex-1 grow bg-forest-green-50 text-cream p-4 text-center">
   <h1 class="text-3xl">Calendar</h1>
   <p>More coming soon.</p>
-  <div class="mt-10 flex flex-col items-center justify-center" id="calendar">
+  <div class="mt-10 flex flex-col items-center justify-center text-forest-green-500" id="calendar">
     <% (0..4).each do |w| %>
       <div class="flex week-#{w}">
       <% (0..6).each do |d| %>
-        <div class="h-32 w-32 border border-black week-#{w}-day-#{d}">
+        <div class="h-32 w-32 border border-forest-green-500 bg-cream week-#{w}-day-#{d}">
           <%= day_of_week(d) %>
         </div>
       <% end %>

@@ -10,11 +10,7 @@
 
 @layer components {
   .btn {
-    @apply py-2 px-4 rounded-md border-gray-500 border-2;
-  }
-
-  .btn-primary {
-    @apply border-blue-500 text-blue-500 hover:border-blue-300 hover:text-blue-300;
+    @apply py-2 px-4 rounded-md bg-cream text-forest-green-500 cursor-pointer;
   }
 
   .field_with_errors {
@@ -37,5 +33,9 @@
   .link-underline:hover {
     background-size: 100% 2px;
     background-position: 0 100%;
+  }
+
+  .notice {
+    @apply text-lg text-center py-2 empty:p-0 bg-forest-green-300 text-cream;
   }
 }
