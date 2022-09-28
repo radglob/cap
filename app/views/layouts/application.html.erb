@@ -12,9 +12,9 @@
     <script src="https://kit.fontawesome.com/85a1f11a97.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="flex flex-col">
     <%= render 'header' %>
-    <main class="container mx-auto md:mt-20">
+    <main class="flex flex-col grow">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
       <%= yield %>

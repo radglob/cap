@@ -1,14 +1,14 @@
-<header class="flex flex-col items-center space-y-2 mb-2">
-  <h1 class="px-8 py-2 text-4xl leading-normal text-center">Greenmount West Community Association</h1>
+<header class="flex flex-col space-y-2 pb-4 px-2 bg-forest-green-dark text-cream">
+  <h1 class="w-3/4 py-2 text-lg font-bold font-serif"><%= link_to "Greenmount West Community Association", root_path %></h1>
   <nav>
-    <ul class="flex flex-col text-lg text-center md:flex-row list-none space-x-2">
-      <li><%= link_to "Your Board", board_path %></li>
-      <li><%= link_to "Committees", committees_path %></li>
-      <li><%= link_to "Calendar", calendar_path %></li>
+    <ul class="flex flex-col text-sm list-none space-y-1 font-semibold">
+      <li><%= link_to "Your Board", board_path, class: "link" %></li>
+      <li><%= link_to "Committees", committees_path, class: "link" %></li>
+      <li><%= link_to "Calendar", calendar_path, class: "link" %></li>
       <% if user_signed_in? %>
-        <li><%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete }, method: :delete %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, class: "link", data: { "turbo-method": :delete }, method: :delete %></li>
       <% else %>
-        <li><%= link_to "Log in", new_user_session_path %></li>
+        <li><%= link_to "Log in", new_user_session_path, class: "link" %></li>
       <% end %>
     </ul>
   </nav>
