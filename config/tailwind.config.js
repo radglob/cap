@@ -13,9 +13,6 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         serif: ['Garamond', 'Georgia', 'ui-serif'],
       },
-      backgroundImage: {
-        'hero-pattern': "linear-gradient(to bottom, rgb(104,47,74,0.75), rgb(104,47,74,0)), url('/img/water-tower-hero-wide.jpg')"
-      },
       backgroundPosition: {
         'mobile-offset': '60% 33%'
       },
@@ -33,7 +30,8 @@ module.exports = {
           700: '#122620',
           800: '#0c1714',
           900: '#000000'
-        }
+        },
+        red: '#a3001e',
       }
     },
   },

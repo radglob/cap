@@ -36,6 +36,10 @@
   }
 
   .notice {
-    @apply text-lg text-center py-2 empty:p-0 bg-forest-green-300 text-cream;
+    @apply text-lg text-center py-2 empty:py-0 bg-forest-green-300 text-cream;
+  }
+
+  .alert {
+    @apply text-lg text-center py-2 empty:py-0 bg-red text-cream;
   }
 }
