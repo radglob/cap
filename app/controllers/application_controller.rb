@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_action :set_variant
+
   protected
 
   def after_sign_in_path_for(user)
@@ -7,5 +9,15 @@ class ApplicationController < ActionController::Base
     else
       new_user_addresses_path(user)
     end
+  end
+
+  private
+
+  def set_variant
+    request.variant = :mobile if mobile?
+  end
+
+  def mobile?
+    request.user_agent =~ /Mobile|webOS/
   end
 end
