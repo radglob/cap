@@ -1,0 +1,13 @@
+<div class="flex py-2 divide-solid divide-cream divide-x space-x-2">
+  <div class="flex flex-col items-center px-2">
+    <% if event.start_date.day == @date.day %>
+      <span class="uppercase">Today</span>
+    <% end %>
+    <span class="text-2xl"><%= event.start_date.day + 1 %></span>
+    <span><%= Date::ABBR_DAYNAMES[event.start_date.wday] %></span>
+  </div>
+  <div class="flex flex-col justify-around px-2">
+    <span><%= event.name %></span>
+    <span class="underline">10:00</span>
+  </div>
+</div>

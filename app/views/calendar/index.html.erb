@@ -4,7 +4,7 @@
   <h2 class="mt-4 text-2xl"><%= Date::MONTHNAMES[@date.month] %></h2>
   <div id="calendar-header" class="mt-10 flex items-center justify-center text-forest-green-500">
     <% (0..6).each do |i| %>
-      <div class="w-32"><%= day_of_week(i) %></div>
+      <div class="text-cream font-bold w-32 mb-2"><%= day_of_week(i) %></div>
     <% end %>
   </div>
   <div class="flex flex-col items-center justify-center text-forest-green-500" id="calendar">

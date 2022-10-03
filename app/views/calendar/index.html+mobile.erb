@@ -1,0 +1,7 @@
+<div class="flex flex-col flex-1 w-screen bg-forest-green-50 text-cream p-4 items-center">
+  <% if @events.empty? %>
+    <div class="my-auto">Sorry, nothing planned this month.</div>
+  <% else %>
+    <%= render partial: "event", collection: @events %>
+  <% end %>
+</div>
