@@ -24,4 +24,8 @@ class User < ApplicationRecord
   def address?
     address.present?
   end
+
+  def admin?
+    is_admin
+  end
 end
