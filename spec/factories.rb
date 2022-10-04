@@ -1,6 +1,15 @@
 require 'faker'
 
 FactoryBot.define do
+  factory :event do
+    name { "MyString" }
+    description { "MyText" }
+    start_date { "2022-10-03" }
+    end_date { "2022-10-03" }
+    start_time { "2022-10-03 22:00:52" }
+    end_time { "2022-10-03 22:00:52" }
+  end
+
   factory :validated_address do
     address1 { "MyString" }
     address2 { "MyString" }
